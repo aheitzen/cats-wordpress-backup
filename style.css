@@ -1,0 +1,715 @@
+/*
+Theme Name: Flat Bootstrap Child
+Theme URI: http://xtremelysocial.com/wordpress/child/
+Description: Child theme for Flat Bootstrap. Includes a stylesheet (style.css) for you to restyle any of the CSS and a functions.php file to change theme parameters or components. Both files include samples of a few common things you might want to do.
+Author: XtremelySocial
+Author url: http://xtremelysocial.com
+Version: 1.5
+License: GNU General Public License
+License URI: http://www.opensource.org/licenses/GPL-3.0
+Template: flat-bootstrap
+Template Version: 1.9
+Tags: one-column, right-sidebar, left-sidebar, fluid-layout, responsive-layout, custom-header, custom-menu, featured-images, featured-image-header, full-width-template, flexible-header, theme-options, sticky-post, threaded-comments, light, translation-ready, rtl-language-support, custom-background
+*/
+
+/* 
+ * IMPORT the parent theme's stylesheet(s). NOTE: This was moved to functions.php for
+ * performance reasons.
+ */
+/*@import url("../flat-bootstrap/style.css");*/
+@import url('https://fonts.googleapis.com/css?family=Cookie|Crimson+Text|Sacramento');
+
+/* PUT YOUR CHANGED STYLES HERE 
+ * 
+ * The best way to do this is to copy in the relevant section from the parent's style.css
+ * file, change what you want, and remove the lines that you didn't change.
+ *
+ * NOTE: All these examples here are included just to show you how to do the most common
+ * things that users have requested, such as changing colors and the look of buttons, etc.
+*/
+
+/* Change the content (page) header to dark blue. */
+/*.content-header {
+	background-color: pink;
+}*/
+
+/* Change the main link color to dark blue. Note that the hover color is set using a 
+ * neat trick with the opacity tag. This simply lightens whatever the link color is. That
+ * way we don't need to try to figure out a hover color that looks good. 
+ */
+a {
+	color: red;
+}
+a:hover,
+a:focus {
+	color: #2980b9;
+	opacity: .75;
+}
+
+/* Make the buttons square, if you'd like. */
+.btn {
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	background-color: pink;
+}
+
+/* PUT ANY NEW STYLES TO USE IN YOUR CONTENT AREAS HERE SO YOU CAN EASILY PASTE THIS
+ * SECTION IF YOU CHANGE THEMES
+ */
+
+ .no-padding {
+ 	padding: 0;
+ }
+
+ .full-height {
+ 	height: 100vh;
+ }
+
+ /*.container {
+ 	    margin-left: 2em;
+ }
+*/
+ #hero-section {
+ 	/*height: 100vh;*/
+ 	background-color: #EC97BD;
+ }
+
+ img.img-responsive.full-screen-image {
+ 	height: 100%;
+ 	width: 100%;
+ 	/*transform: translateY(-8em);*/
+ }
+
+ .title-h1 {
+ 	    font-weight: 300;
+    position: absolute;
+    text-align: center;
+    display: flex;
+     justify-content: center; 
+    align-items: center;
+     width: 100%; 
+    height: 25%;
+    color: black;
+    text-shadow: -5px 4px 0 white;
+    font-size: 5.5em;
+    text-transform: uppercase;
+ }
+
+ .text-center.mission-header {
+	/*font-family: 'Sacramento', cursive;*/
+	/*font-family: 'Crimson Text', serif;*/
+	
+	font-size: 3em;
+	font-weight: 800;
+    font-size: 2.5em;
+    margin-left: 14px;
+    color: white;
+        font-weight: 400;
+    font-size: 2.5em;
+    margin-left: 14px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Raleway", Arial, "Helvetica Neue", sans-serif;
+ }
+
+ .mission-statment {
+ 	background-color: #EEBB21;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	flex-direction: column;
+ 	height: 100%;
+ 	
+ }
+
+ .mission-statement-paragraph {
+ 	font-family: 'Crimson Text', serif;
+ 	margin: 1em 12.3em 0em 12.3em;
+    text-align:justify;
+    color: #151515;
+ }
+
+ #mission-statement {
+ 	background: white;
+ }
+
+ .img-responsive.mission-image {
+	height: 100vh;
+	position: relative;
+	z-index: 0;
+	width: 100%;
+ }
+  .img-responsive.logo-image {
+	height: 10em;
+	    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    height: 100%;
+ }
+
+ /*FEATURES CSS*/
+
+ #features-section {
+	background-color: white;
+ }
+
+ .panel-default {
+ 	border-color: #EC97BD;
+    height: 16em;
+        width: 18em;
+
+ }
+
+ .panel-body {
+	background-color: white;
+ }
+
+ .panel-title {
+ 	text-align: center;
+    font-size: 1.5em;
+    color: white;
+    background-color: #E22CC3;
+    font-family: 'Crimson Text', serif;
+ }
+
+ .panel-default>.panel-heading {
+ 	background: white;
+ }
+
+ .panel-heading {
+ 	padding-left: 0;
+ 	padding-right: 0;
+ 	padding-bottom: 0;
+ 	background: white;
+ }
+
+#features-type-section {
+	
+}
+
+i.far.fa-gem {
+	color: #E22CC3;
+	font-size: 2em;
+	    margin: .5em;
+	    display: flex;
+
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.feature-sub-header {
+	font-family: 'Crimson Text', serif;
+	font-size: 1.5em;
+}
+
+.row.margin-60 {
+	margin-right: 60px;
+	margin-left: 60px;
+}
+
+.featured-fealines-h1 {
+    font-size: 1.3em;
+    margin-top: 2em;
+    margin-top: 1.5em;
+    color: black;
+    font-size: 23px;
+    margin-bottom: 1.5em;
+    font-family: "Raleway", Arial, "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.second-featured-felines {
+	/*background-color: #EEBB21;*/
+}
+
+/*POSTS SECTION*/
+
+#featured-felines {
+	background-color: white;
+	/*padding: 5em;*/
+}
+
+.post-link-title {
+	font-family: 'Crimson Text', serif;
+    color: #E22CC3;
+    font-size: 1em;
+}
+
+p {
+	font-family: 'Crimson Text', serif;
+}
+/*
+img.attachment-medium.size-medium.wp-post-image {
+	border-radius: 50%;
+    height: 14em;
+    width: 14em;
+}*/
+
+#post-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.post-display {
+	    border: solid #EEBB21;
+	    /*background: #EEBB21;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	/*margin-top: 3em;*/
+    margin-bottom: 3em;
+
+}
+
+.post-display-white {
+	    border: solid white;
+	    /*background: #EEBB21;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	/*margin-top: 3em;*/
+    margin-bottom: 3em;
+
+}
+
+.snippet-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#category-search {
+	background-color: white;
+}
+
+#category-search-header {
+	background-color: #EEBB21;
+	height: 4em;
+	margin-bottom: 3em;
+}
+
+.category-search-main-header {
+
+}
+
+
+
+
+/*FOOTER CSS*/
+
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: red;
+}
+
+a.smoothscroll {
+	color: blue;
+}
+
+h3 {
+	font-weight: 800;
+	font-size: 2.5em;
+	margin-left: 14px;
+	color: #151515;
+}
+
+#sample-text {
+	background-color: #EC97BD;
+}
+
+#footer {
+	height: 6em;
+	background-color: #151515; 
+	/*background-color: #FF4A1A;*/
+}
+
+.footer-row {
+	    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.footer-right {
+	display: flex;
+    justify-content: flex-end;
+    margin-right: 3em;
+    font-family: 'Crimson Text', serif;
+    color: #151515;
+    font-size: 16px;
+    line-height: .9;
+    margin-top: 11px;
+}
+
+i.fab.fa-instagram {
+	font-size: 20px;
+	margin-left: 2em;
+	color: #151515;
+}
+
+i.fab.fa-instagram:hover {
+	color: #EEBB21;
+	cursor: pointer;
+}
+
+i.fab.fa-youtube {
+	color: #151515;
+	cursor: pointer;
+}
+
+i.fab.fa-youtube:hover {
+	color: #EEBB21;
+	cursor: pointer;
+}
+
+#post-instagram {
+	margin-left: 0em;
+}
+
+#post-twitter {
+	margin-right: 1em;
+}
+
+i.fab.fa-twitter {
+	font-size: 20px;
+	margin-left: 1em;
+	margin-right: 2em;
+	color: #151515;
+}
+
+i.fab.fa-twitter:hover {
+	color: #EEBB21;
+	cursor: pointer;
+}
+
+.footer-headers {
+	    font-family: 'Crimson Text', serif;
+    color: #151515;
+    font-size: 16px;
+    line-height: .9;
+}
+
+#social-media-footer {
+	width: 30%;
+}
+
+.social-media-header {
+	font-size: 1.3em;
+    margin-top: 2em;
+    margin-top: 1.5em;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Raleway", Arial, "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.social-media-callouts {
+	font-size: .9em;
+    margin-top: 0;
+    /* margin-top: 1.5em; */
+    color: black;
+    /* font-size: 30px; */
+    text-align: center;
+    font-family: "Raleway", Arial, "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/*SINGLE.PHP*/
+.single-img {
+	height: 50em;
+	width: auto;
+	display: flex;
+    align-items: center;
+}
+
+.flex-center {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+   	flex-direction: column;
+}
+
+.single-box {
+	background-color: white;
+    height: 38em;
+    display: flex;
+    justify-content: flex-end;
+    line-height: 2;
+    flex-direction: column;
+
+}
+
+/*.single-box-whole {
+	margin-bottom: 6em;
+}*/
+
+.pull-right {
+	display: flex;
+    justify-content: flex-end;
+}
+
+i.fas.fa-arrow-left {
+	margin-left: 1em;
+	font-size: 20px;
+	margin-bottom: 1em;
+	color: #151515;
+	margin-top: 3em;
+}
+
+i.fas.fa-arrow-right {
+	margin-left: 1em;
+	margin-right: 1em;
+	font-size: 20px;
+	margin-bottom: 1em;
+	color: #151515;
+	margin-top: 3em;
+}
+
+
+.col-md-6.flex-center.no-padding.post-img-container {
+	background-color: #EEBB21;
+	height: 38em;
+
+}
+
+.post-img {
+	height: 32em;
+	margin: 2em;
+	margin-top: 4em;
+}
+
+.single-p-text {
+	font-family: 'Crimson Text', serif;
+	margin-left: 1em;
+	color: #151515;
+	margin-right: 6em;
+}
+
+.single-break-point {
+	    height: 5px;
+    width: 64px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    background: #EEBB21;
+    margin-left: 1em;
+}
+
+#post-margin {
+	margin-bottom: 2em;
+	margin-left: 1em;
+}
+
+#content {
+	background-color: white;
+}
+
+.post-button-group {
+	    margin-top: 1em;
+	  /*  display: flex;
+    justify-content: center;*/
+}
+
+.post-category-img {
+	margin-top: 3em;
+	   /* width: 13em;
+    height: 17em;*/
+}
+
+.post-categories {
+	list-style-type: none;
+	    font-weight: 800;
+    font-size: 43px;
+    margin-left: 14px;
+    color: #151515;
+}
+
+.post-categories-h3 {
+	    font-weight: 800;
+    font-size: 23px;
+    /* margin-left: 14px; */
+    color: #151515;
+    text-align: right;
+}
+
+button {
+	width: 14em;
+	margin-left: 1em;
+	    border-radius: 0;
+    background: white;
+    border: solid 2px #EEBB21;
+    color: black;
+    font-family: 'Crimson Text', serif;
+}
+
+button:hover {
+	 background: #EEBB21;
+	 border: white solid 2px;
+}
+
+.img-caption {
+	margin-top: -1em;
+    font-size: 16px;
+    font-weight: 200;
+    color: #151515;
+    font-family: 'Crimson Text', serif;
+}
+    
+/*FORM STYLE*/
+
+header.content-header {
+	background-color: hotpink;
+}
+
+li.wpuf-el.post_title.field-size-large {
+	margin-top: 3em;
+}
+
+h1.page-title {
+	font-family: 'Crimson Text', serif;
+}
+
+/*NAVBAR*/
+
+.navbar.navbar-default.navbar-static-top {
+	background-color: #151515;
+}
+
+/*SOCIAL MEDIA*/
+
+#social-media {
+	background: #EEBB21;
+	height: 27.7em;
+	margin-top: 8em;
+}
+
+.carousel {
+    position: relative;
+    height: 15em;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#pp {
+	margin-top: 3em;
+}
+
+
+/*SEARCH SECTION*/
+
+#search-and-rescue {
+	background-color: #151515;
+	margin-top: 5em;
+	margin-bottom: 3em;
+	height: 390px;
+	/*background: linear-gradient(90deg,  50%, #EEBB21 50%);*/
+}
+
+h3.search-and-filter-h3 {
+	    margin-top: 1.5em;
+    color: #EEBB21;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Raleway", Arial, "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+input[type="submit"] {
+	background-color: #EEBB21;
+	font-family: "Raleway", Arial, "Helvetica Neue", sans-serif;
+	font-size: 18px;
+}
+
+input[type="submit"]:hover {
+	background-color: white;
+	font-family: "Raleway", Arial, "Helvetica Neue", sans-serif;
+	font-size: 18px;
+	color: black;
+}
+
+input,select {
+	width: 321px;
+	margin-top: 2em;
+	font-family: "Raleway", Arial, "Helvetica Neue", sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+i.fas.fa-arrow-left {
+    margin-left: 1em;
+    font-size: 20px;
+    margin-bottom: 1em;
+    color: black;
+    display: flex;
+    text-shadow: none;
+    align-items: center;
+    flex-direction: column;
+    height: 30%;
+    font-size: 1.5em;
+    justify-content: center;
+}
+
+i.fas.fa-arrow-right {
+    margin-left: 1em;
+    font-size: 20px;
+    margin-bottom: 1em;
+    color: black;
+    
+    display: flex;
+    text-shadow: none;
+    align-items: center;
+    flex-direction: column;
+    height: 30%;
+    font-size: 1.5em;
+    justify-content: center;
+}
+
+.searchandfilter ul {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.test-paragraphs {
+	    /* font-family: 'Crimson Text', serif; */
+    font-size: .9em;
+    margin-top: 0;
+    /* margin-top: 1.5em; */
+    color: black;
+    /* font-size: 30px; */
+    text-align: center;
+    font-family: "Raleway", Arial, "Helvetica Neue", sans-serif;
+    /* text-transform: uppercase; */
+    font-weight: 400;
+    letter-spacing: 1px;
+}
